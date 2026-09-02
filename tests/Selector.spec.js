@@ -11,8 +11,13 @@ test('UI Controls', async ({page}) =>{
     console.log(await page.locator(".radiotextsty").last().isChecked());
     expect(page.locator(".radiotextsty").last()).toBeChecked(); 
     
-    await page.pause();  
+    await page.locator("#terms").click();
+    await expect( page. locator("#terms")).toBeChecked();
+    await page.locator("#terms"). uncheck();
+    expect(await page.locator("#terms").isChecked()).toBeFalsy();
 
+    
+    
 
 
 });
