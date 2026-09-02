@@ -1,6 +1,6 @@
 const {test,expect} =require('@playwright/test')
 
-test.only('form-fill' , async ({page}) =>{
+test('form-fill' , async ({page}) =>{
     await page.goto("https://rahulshettyacademy.com/client");
     await page.locator("#userEmail").fill("garvitchugh66@gmail.com");
     await page.locator("#userPassword").fill("Test@1234");
